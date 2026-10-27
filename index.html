@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>סיור סתיו - כוכב הצפון</title>
+<style>
+@font-face{font-family:'Masada';src:url('fonts/Masada.ttf') format('truetype');font-weight:500;font-style:normal}
+@font-face{font-family:'SimplerPro';src:url('fonts/SimplerPro-Regular.otf') format('opentype');font-weight:400;font-style:normal}
+@font-face{font-family:'SimplerPro';src:url('fonts/SimplerPro-Bold.otf') format('opentype');font-weight:700;font-style:normal}
+@font-face{font-family:'SimplerPro';src:url('fonts/SimplerPro-Black.otf') format('opentype');font-weight:900;font-style:normal}
+body{margin:0;background:#faf6ed;color:#414042;font-family:'SimplerPro',sans-serif;font-weight:400}
+a{color:#3c7575}a:hover{color:#224949}
+h1,h2,h3,h4{font-family:'Masada',sans-serif;font-weight:500}
+h2{margin:0 0 12px;font-size:48px;color:#224949;line-height:1.15}
+h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.label{font-size:14px;font-weight:700;letter-spacing:.02em;color:#3c7575}
+.pill{display:inline-block;padding:4px 12px;border-radius:999px;background:#b8ded4;color:#224949;font-size:14px;font-weight:700}
+.p{font-size:17px;line-height:1.75;margin:10px 0 0}
+.spot{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:#224949;color:#faf6ed;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;text-decoration:none;border:3px solid #faf6ed;box-sizing:border-box;z-index:2;cursor:pointer;font-family:'Masada',sans-serif;font-weight:500}
+.spot:hover{background:#d3b864;color:#224949}
+.spot .lbl{position:absolute;left:48px;top:50%;transform:translateY(-50%);white-space:nowrap;background:#faf6ed;color:#224949;padding:4px 10px;font-family:'Masada',sans-serif;font-size:18px;font-weight:500;border:1px solid #3c7575;text-decoration:none}
+.spot .lbl.l{left:auto;right:48px}
+.popup{display:none;position:fixed;inset:0;z-index:20;background:rgba(34,73,73,.6);align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+.card{background:#fff;padding:26px 28px;border-top:4px solid #3c7575;max-width:620px;width:100%;max-height:90vh;overflow:auto;box-sizing:border-box}
+.row{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid #d9d4c6}
+.time{min-width:64px;font-weight:700;color:#224949}
+.choice{border:2px solid #3c7575;background:#fff;padding:18px 20px;margin:12px 0}
+.card h3{font-size:40px;margin:0 0 14px;line-height:1.2}
+.choice h3{font-size:22px;margin:6px 0 8px}
+.choice p{margin:0;font-size:16px;line-height:1.7}
+.names{margin-top:12px;font-weight:700;color:#3c7575}
+.bio{margin-top:12px;padding-top:12px;border-top:1px solid #d9d4c6}
+.bio .who{font-weight:700;color:#224949}
+.bio p{margin:6px 0 0;font-size:15px;line-height:1.7}
+.opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0}
+.opts .choice{margin:0}
+.cta{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#d3b864;color:#224949;font-weight:900;font-size:18px;padding:14px 32px;border-radius:999px;text-decoration:none;box-shadow:0 4px 16px rgba(34,73,73,.25);z-index:10}
+.cta:hover{background:#224949;color:#faf6ed}
+@media (max-width:640px){h2{font-size:34px}h3{font-size:22px}.row{flex-direction:column;gap:4px}.opts{grid-template-columns:minmax(0,1fr)}.spot .lbl{font-size:13px}}
+.popup{display:none}
+.popup.open{display:flex}
+.card{position:relative}
+.x{position:absolute;top:10px;left:10px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;font-family:'Masada',sans-serif;font-size:34px;line-height:1;color:#224949;padding:0}
+.x:hover{color:#3c7575}
+.card h3{padding-left:44px}
+
+</style>
+</head>
+<body>
+<div style="width:100%;box-sizing:border-box">
+
+<section style="background: #224949; color: #faf6ed; padding: 56px 0 0; height: 500px"><div class="wrap"><img src="logo.svg" alt="בית ספר מנדל למנהיגות חינוכית" style="height:56px;width:auto;display:block;filter:brightness(0) invert(1)"></div>
+<div class="wrap" style="padding-top:56px;padding-bottom:0">
+<div class="wrap">
+<h1 style="margin: 14px 0 6px; font-size: 90px; line-height: 1.1; text-align: center"><b>כוכב הצפון</b></h1>
+<h2 style="color: #d3b864; font-size: 44px; margin: 0 0 28px; text-align: center">סיור סתיו תשפ"ז</h2>
+<div style="font-size:22px;line-height:1.8">
+<div style="text-align: center">ימים שני–שלישי | 9-10.11 | אצבע הגליל</div>
+</div>
+</div>
+</div><div class="wrap" aria-hidden="true" style="padding-top: 56px; width: 100%"><svg viewBox="0 0 1000 50" aria-hidden="true" focusable="false" style="width:100%;height:auto;display:block"><path d="M0 0 h50 v50 z" fill="#b8ded4"></path><rect x="50" y="0" width="50" height="50" fill="#3c7575"></rect><rect x="100" y="0" width="50" height="50" fill="#d3b864"></rect><path d="M150 0 h50 v50 z" fill="#224949"></path><rect x="200" y="0" width="50" height="50" fill="#b8ded4"></rect><rect x="250" y="0" width="50" height="50" fill="#3c7575"></rect><path d="M300 0 h50 v50 z" fill="#d3b864"></path><rect x="350" y="0" width="50" height="50" fill="#224949"></rect><rect x="400" y="0" width="50" height="50" fill="#b8ded4"></rect><path d="M450 0 h50 v50 z" fill="#3c7575"></path><rect x="500" y="0" width="50" height="50" fill="#d3b864"></rect><rect x="550" y="0" width="50" height="50" fill="#224949"></rect><path d="M600 0 h50 v50 z" fill="#b8ded4"></path><rect x="650" y="0" width="50" height="50" fill="#3c7575"></rect><rect x="700" y="0" width="50" height="50" fill="#d3b864"></rect><path d="M750 0 h50 v50 z" fill="#224949"></path><rect x="800" y="0" width="50" height="50" fill="#b8ded4"></rect><rect x="850" y="0" width="50" height="50" fill="#3c7575"></rect><path d="M900 0 h50 v50 z" fill="#d3b864"></path><rect x="950" y="0" width="50" height="50" fill="#224949"></rect></svg></div></section>
+
+
+<section style="padding:80px 0;background:#faf6ed">
+<div class="wrap">
+<div class="label">לפני הסיור · יום רביעי | 4.11 | ZOOM | 20:00–21:15</div>
+<h2 style="margin-top:8px">קריית שמונה והגליל העליון, בין ספר לפריפריה: מבט היסטורי</h2>
+<div class="names" style="color:#224949;font-size:20px">פרופ' אמיר גולדשטיין</div>
+<div class="bio" style="border-top:none;padding-top:0;margin-top:8px">
+<p class="p" style="font-size:17px">אמיר גולדשטיין הוא חבר סגל מנדל צפון, מרצה בתוכניות ומעורב בבניית התפישה הפדגוגית במרכז מנדל למנהיגות בצפון. היסטוריון ומחנך, גדל בקרית שמונה, עבד בבית הספר התיכון דנציגר (שבו למד) וניהל את בית הספר עד 2012. בעשור האחרון הוא מרצה במכללה האקדמית תל-חי וכיהן כראש חוג וכדקאן הסטודנטים. אמיר חוקר את תולדות הציונות וארץ ישראל בעת החדשה ואת הזיכרון הקולקטיבי הישראלי, ומתמחה בחקר הימין הציוני מימי זאב ז'בוטינסקי ועד ימי מנחם בגין. בשנים האחרונות הוא חוקר את ההיסטוריה של קרית שמונה ומוביל תהליכים קהילתיים של גיבוש הנרטיב ההיסטורי המקומי.</p>
+<p class="p" style="font-size:16px"><b>בין פרסומיו:</b> "גבורה והדרה: עולי הגרדום והזיכרון הישראלי", הוצאת יד בן צבי ומכון ז'בוטינסקי; "דרך רבת פנים: ציונותו של ז'בוטינסקי לנוכח האנטישמיות", הוצאת אוניברסיטת בן-גוריון ומכון ז'בוטינסקי; "תל-חי, 2020-1920: בין היסטוריה לזיכרון", הוצאת יד בן צבי ואוניברסיטת תל-אביב (עריכה משותפת עם פרופ' יעל זרובבל).</p>
+</div>
+</div>
+</section>
+
+<section id="map" style="padding:80px 0;background:#b8ded4">
+<div class="wrap">
+<div class="label" style="color:#224949">מפה</div>
+<h2 style="margin-top:8px">איפה נהיה?</h2>
+<p style="margin:0 0 24px;font-size:17px;line-height:1.6">לחצו על שם מקום כדי לקרוא עליו.</p>
+
+<div style="position:relative;width:100%;aspect-ratio:760/600;background:#eef5f2;border:1px solid #3c7575;box-sizing:border-box;overflow:hidden">
+<svg viewBox="0 0 760 600" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%">
+<polygon points="42,260 211,250 338,280 380,240 422,200 431,150 439,110 448,70 515,80 574,90 608,80 659,50 684,130 701,250 684,390 633,500 515,570 448,530 431,650 422,850 422,950 -42,950 -68,570 17,500" fill="#faf6ed" stroke="#3c7575" stroke-width="1"></polygon>
+<polyline points="42,260 211,250 338,280 380,240 422,200 431,150 439,110 448,70" fill="none" stroke="#224949" stroke-width="0.6" stroke-dasharray="3 4"></polyline>
+<polyline points="448,70 515,80 574,90 608,80 659,50 684,130 701,250 684,390" fill="none" stroke="#224949" stroke-width="0.6" stroke-dasharray="3 4"></polyline>
+</svg>
+<div style="position:absolute;left:28%;top:21%;font-family:'Masada',sans-serif;font-size:18px;color:#3c7575">לבנון</div>
+<div style="position:absolute;left:92%;top:38%;font-family:'Masada',sans-serif;font-size:18px;color:#3c7575">סוריה</div>
+
+<button class="spot" style="left:58.8%;top:11.5%" data-open="metula">1<span class="lbl">מטולה</span></button>
+<button class="spot" style="left:80.2%;top:13.5%" data-open="majdal">2<span class="lbl l">מג'דל שמס</span></button>
+<button class="spot" style="left:57.8%;top:23.7%" data-open="kiryat">3<span class="lbl">קריית שמונה</span></button>
+<button class="spot" style="left:54.9%;top:25.8%" data-open="manara">4<span class="lbl l">מנרה</span></button>
+<button class="spot" style="left:67.8%;top:30.5%" data-open="shamir">5<span class="lbl">שמיר</span></button>
+<button class="spot" style="left:64.6%;top:31%" data-open="council">6<span class="lbl l">מועצה אזורית הגליל העליון</span></button>
+</div>
+</div>
+</section>
+
+<div class="popup" data-popup="metula">
+<div class="card" role="dialog" aria-modal="true"><button class="x" aria-label="סגירה">×</button>
+<h3>מטולה</h3>
+<p class="p" style="font-size:16px">היא מועצה מקומית ומושבה בגליל העליון והיישוב הצפוני ביותר במדינת ישראל. שטח השיפוט של המועצה הוא כ־10,000 דונם והיא שוכנת על גבעה בגובה 527 מטרים המשקיפה על הרי הגליל, החרמון, רמת הגולן, עמק החולה, עמק עיון ועל פסגות הרים ברכס הר הלבנון. מטולה מוקפת בגבול עם לבנון ממזרח, מצפון וממערב. בצידה המזרחי נמצאת שמורת נחל עיון. בתחילה היה במקום כפר דרוזי בשם "אל-מֻטַ֫לַּה" (المطلة), שפירושו "התצפית". לאחר שנקנה המקום על ידי הברון רוטשילד, הציע אליעזר בן-יהודה לקרוא למקום "עם סגולה" על שם הילדה הראשונה שנולדה ביישוב. שם נוסף שהוצע היה "מצפה בנימין", על שם אברהם בנימין אדמונד ג'יימס דה רוטשילד. שמות אלה ואחרים היו כולם בעלי שתי מילים, כמו שמות כל שאר היישובים שעזר הברון רוטשילד להקים: פתח תקווה, ראשון לציון, זכרון יעקב ועוד. לבסוף, נשאר עד היום העִברוּת של השם הערבי "אל-מֻטַ֫לַּה" – בעבר: מתולה, וכיום: מטולה.</p>
+
+</div>
+</div>
+
+<div class="popup" data-popup="majdal">
+<div class="card" role="dialog" aria-modal="true"><button class="x" aria-label="סגירה">×</button>
+<h3>מג'דל שמס</h3>
+<p class="p" style="font-size:16px">היא מועצה מקומית דרוזית בצפון רמת הגולן, למרגלות החרמון, ובה כ־12 אלף תושבים. היישוב התפתח במשך מאות שנים כקהילה חקלאית, שהתפרנסה בעיקר מגידול תפוחים ודובדבנים. כיום נשענת כלכלתו על חקלאות, תיירות הקשורה לחרמון ולנופי האזור, וכן על מסחר ושירותים. עד מלחמת ששת הימים בשנת 1967 היה היישוב חלק מסוריה, ומאז הוא נמצא בשליטת ישראל. רבים מתושביו מחזיקים במעמד של תושבי קבע בישראל ולא באזרחות ישראלית, ושומרים על זיקה היסטורית, תרבותית ומשפחתית לסוריה. הקהילה אינה בעלת עמדה אחידה ביחס לזהות, לאזרחות וליחסים עם ישראל וסוריה. בשנים האחרונות, על רקע השינויים בסוריה והמציאות האזורית, חלו תמורות ביחסם של חלק מהתושבים לאזרחות הישראלית, אך שאלות הזהות והשייכות נותרו מורכבות ורגישות.</p>
+
+</div>
+</div>
+
+<div class="popup" data-popup="manara">
+<div class="card" role="dialog" aria-modal="true"><button class="x" aria-label="סגירה">×</button>
+<h3>מנרה</h3>
+<p class="p" style="font-size:16px">מקור השם: משמר את השם הערבי של המקום "מַנָארָה", שמשמעותו צריח. שוכן על רכס הרי נפתלי, על גבול לבנון, בגובה 880 מ' מעל פני הים.</p>
+</div>
+</div>
+
+<div class="popup" data-popup="council">
+<div class="card" role="dialog" aria-modal="true"><button class="x" aria-label="סגירה">×</button>
+<h3>מועצה אזורית הגליל העליון</h3>
+<p class="p" style="font-size:16px">שוכנת בקצה הצפון מזרחי של מדינת ישראל, בתחום שיפוטה כ-300,000 דונם, 29 קיבוצים, חוות ורד הגליל, "דומוס גליליי", בית ספר שדה חרמון ומכללת תל-חי. במועצה כ-21,000 תושבים. יישובי המועצה נחלקים לשלושה ע"פ אזורים גיאוגרפיים: יישובי ההר, יישובי צפון עמק החולה ויישובי דרום העמק. עד שנת 1975 הייתה מורכבת מקיבוצים ומושבים. בעקבות תהליך התגבשות מועצות אזוריות על בסיס זיהוי התיישבותי, פרשו המושבים והקימו מועצה אזורית עצמאית - מבואות-חרמון. לאחר תהליך זה נותרו במועצה אזורית הגליל העליון קיבוצים בלבד. אופייה של מועצה אזורית הגליל העליון מושפע מהרכבה מקיבוצים בלבד ומשני מאפיינים נוספים: ריחוק מהמרכז הכלכלי והפוליטי של מדינת ישראל וקירבה לגבול הבין-לאומי. לאור קירבתו של האזור לגבולותיה הצפוניים של המדינה, נקשרו הקיבוצים לאירועים בעלי אופי היסטורי ובטחוני: הקמת תל-חי (1920), יישובי "חומה ומגדל" (1939), מלחמת השחרור (כפר-סאלד, גדות ומחניים) וקו האש הסורי עד 1967. מאז מוטרד האזור בשל קרבתו לגבול לבנון. 23 מקיבוצי המועצה מוגדרים כיישובי קו עימות.</p>
+</div>
+</div>
+
+<div class="popup" data-popup="shamir">
+<div class="card" role="dialog" aria-modal="true"><button class="x" aria-label="סגירה">×</button>
+<h3>שמיר</h3>
+<p class="p" style="font-size:16px">&nbsp;שנת הקמה: 1944, מקור השם:&nbsp; לקוח מספר יחזקאל, ומשמעותו סלע חזק ויציב. "כשמיר חזק מצור נתתי מצחך" יחזקאל ג' פסוק ט'. נמצא למרגלות רמת הגולן,&nbsp; שוכן באזור הררי ומשתלב בטבע, בנחלים ובנוף הגלילי שסביבו. בשנת 2002 שינה הקיבוץ את אופיו והפך לקיבוץ מופרט, המחויב לעזרה הדדית ומקיים ערבות הדדית בין חבריו.</p>
+
+</div>
+</div>
+
+<div class="popup" data-popup="kiryat">
+<div class="card" role="dialog" aria-modal="true"><button class="x" aria-label="סגירה">×</button>
+<h3>קריית שמונה</h3>
+
+<div class="p" style="font-size:16px"><div>היא העיר הצפונית ביותר בישראל. כעיר היחידה באצבע הגליל ומיקומה לצד כביש 90, משמשת קריית שמונה מרכז אזורי ליישובי הסביבה בשירותי בריאות, תעשייה, שירותים עסקיים ומסחר. בו' בטבת ה'תש"י, 26 בדצמבר 1949, הוקמה קריית שמונה כמעברה על חורבות הכפר הערבי "אל-ח'אלצה" (חלסה) הנטוש, שתושביו נמלטו במלחמת העצמאות במעלה ההר לדרום לבנון. קריית שמונה היא אחד ממאות יישובים חקלאיים וכשלושים ערים ועיירות פיתוח חדשות, רובם שוכנים באזורי הספר, שהוקמו על ידי ממשלת ישראל מעט לאחר הקמת המדינה, בשנות החמישים והשישים. הקמת היישוב בעמק החולה, ארבעה ק"מ מן הגבול, נעשה בגלל מגמת הממשלה לפזר את האוכלוסייה ברחבי המדינה ולמנוע את ריכוזן בערי החוף, לחזק את השליטה הביטחונית באזורים המרוחקים מן המרכז ולמנוע שיבה של ערבים. כמו כן, לפי "תוכנית האדריכל אריה שרון", שאומצה של ידי הגורמים המיישבים, קריית שמונה (כמו עיירות פיתוח אחרות) הייתה אמורה לשמש כמרכז עירוני קטן (עד 5,000 תושבים) באזור פיתוח (עיירת פיתוח) שמספק שירותים ליישובי אצבע הגליל החקלאיים. למעשה, העיר נבנתה ללא תוכנית אב, אלא שכונה אחר שכונה בהתאם לגלי העלייה. בבניית העיר לא הייתה התייחסות לנחל עין זהב ונחל שושן (נחל הטחנות) העוברים בה – בתי המגורים נבנו על גדות הנחל, ורצועה צרה בלבד יוחדה לאפיק (מלבד החלקים של פארק הזהב). בשל כך, נוצר מגע ישיר ויומיומי בין האוכלוסייה לנחל – מצב נדיר בערי ישראל.&nbsp;&nbsp;</div><div>קריית שמונה עברה ועודנה עוברת תהליך שיקום מורכב ומאתגר בעקבות מלחמת חרבות ברזל ומטחי הירי הרבים של חזבאללה. היקף ההרס: כ-1,000 דירות נפגעו מתקיפות, וכ-200 דירות נהרסו כליל. כשליש עד כ-40% מתושבי העיר לא חזרו להתגורר בה גם זמן רב לאחר הפסקת האש, כאשר לפי הערכות שונות כ-60% מהתושבים שבו, אך הקהילה עדיין חווה קשיי התאוששות עמוקים. מנגד, מתועדים גם גלים חדשים של משפחות צעירות שמצטרפות לעיר. עסקים מקומיים רבים נאבקים לשרוד את השלכות התקופה הארוכה שבה העיר הייתה נטושה, וישנה ביקורת ציבורית ומחאות נגד קצב העברת, עיכוב או ניהול כספי השיקום והסיוע הממשלתי. בחודש ינואר 2026 אישרה המל"ג את הפיכת מכללת תל-חי ל"אוניברסיטת קריית שמונה", ובתחילת פברואר 2026 התקיימה ישיבת ממשלה בעיר שבה הוצג תוכנית לשיקום הצפון.</div><div><br></div></div>
+</div>
+</div>
+
+<section style="padding:80px 0;background:#faf6ed">
+<div class="wrap">
+<div class="label">יום ראשון–שני</div>
+<h2 style="margin-top:8px">יום שני | 9.11</h2>
+<div style="font-size:24px;font-family:'Masada',sans-serif;color:#3c7575;margin-top:4px">אצבע הגליל</div>
+
+<div style="margin-top:24px">
+<div class="choice" style="background:#faf6ed">
+<div class="label">הסעה</div>
+<div class="opts">
+<div class="choice">
+<div class="label">אוטובוס א'</div>
+<h3>06:30 · באר שבע</h3>
+<p>יציאה מבאר שבע, על כביש 6, עצירה בניצני עוז, נסיעה למנרה</p>
+</div>
+<div class="choice">
+<div class="label">אוטובוס ב'</div>
+<h3>07:00 · ירושלים</h3>
+<p>יציאה מירושלים, עצירה בלטרון, נסיעה למנרה</p>
+</div>
+<div class="choice">
+<div class="label">אוטובוס ג'</div>
+<h3>09:00 · בנימינה</h3>
+<p>יציאה מבנימינה (תחנת הרכבת), נסיעה למנרה</p>
+</div>
+</div>
+</div>
+
+<div class="row"><div class="time">11:00</div><div>הגעה למנרה</div></div>
+<div class="row"><div class="time">11:15</div><div>
+<div style="font-weight:700;color:#224949;font-size:20px">אצבע הגליל: מבט גאו-פוליטי</div>
+<div>הרצאה וסיור בקיבוץ מנרה</div>
+<div class="bio" style="margin-top:12px">
+<div class="who">יוחאי וולפין</div>
+<p>חבר קיבוץ כפר הנשיא במקור, הגיע לתחום הניהול הקהילתי לאחר שלמד רפואה סינית במשך ארבע שנים ואף עסק והתמחה בתחום. בשנים האחרונות, ובפרט במהלך מלחמת חרבות ברזל ולאחריה, הפך לאחד הקולות הבולטים המייצגים את תושבי קו העימות בצפון. כמנהל הקהילה של מנרה – קיבוץ שספג פגיעות קשות מאוד בתשתיות ובמבנים – וולפין מוביל את מאמצי השיקום הפיזי, השגת מקורות המימון, וחיזוק החוסן הקהילתי של התושבים המפונים ואלו השבים לביתם. הוא מרבה להתראיין בכלי התקשורת השונים בנוגע לאתגרי השיקום וההתמודדות הקהילתית מול משרדי הממשלה.</p>
+</div>
+</div></div>
+<div class="row"><div class="time">12:45</div><div>ארוחת צהריים</div></div>
+<div class="row"><div class="time">13:30</div><div>עלייה לאוטובוסים, יציאה לסיורים</div></div>
+</div>
+
+<div style="margin-top:36px">
+<h3>14:00 · אצבע הגליל: בין שבר לתקווה</h3>
+<div style="font-size:20px;color:#3c7575;font-weight:700;margin:4px 0 12px">סיורים לבחירה</div>
+<div><span class="pill" style="background:#d3b864">בחירה: בחרו סיור אחד מבין השלושה</span></div>
+
+<div class="choice">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה א'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="20,0 20,20 0,20" fill="#3c7575"></polygon><rect x="20" y="0" width="20" height="20" fill="#224949"></rect><rect x="0" y="20" width="20" height="20" fill="#224949"></rect><rect x="20" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><polygon points="46,0 66,0 66,20" fill="#d3b864"></polygon><rect x="66" y="0" width="20" height="20" fill="#3c7575"></rect><rect x="46" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="66" y="20" width="20" height="20" fill="#224949"></rect><rect x="92" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="112" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="112,0 112,20 132,20" fill="#3c7575"></polygon><rect x="92" y="20" width="20" height="20" fill="#224949"></rect><rect x="112" y="20" width="20" height="20" fill="#b8ded4"></rect></svg></div>
+<h3>פינוי, שיבה ושייכות, סיפורה של מטולה</h3>
+<p>סיפורה של מטולה במלחמת "חרבות ברזל" והחזית הצפונית הוא פרק מורכב וכואב בתולדות ההתיישבות בארץ. המושבה הצפונית ביותר בישראל, המוקפת משלושה צדדים בגבול לבנון, הפכה במהלך המלחמה לקו האש הראשון, ספגה הרס כבד, פונתה מיושביה, ונותרה חודשים ארוכים כמעט שוממת מאדם, מובלעת מטווחת הנלחמת על קיומה. מי שנותרו לשמור על המושבה היו חברי כיתת הכוננות המקומית וראש המועצה. בעקבות פגיעות מדויקות של חיזבאללה באמצעי התצפית והתקשורת הגלויים, הוקם במקום חמ"ל ממנו נוהלה ההגנה על היישוב. בסיור נפגוש את ליאת כהן רביב, תושבת מטולה, פעילה אזרחית וחברתית בולטת, מנכל"ית תנועת מצפינים. את אביב עזוז, חבר כיתת הכוננות ואת משפחת סמוטריץ', מהמשפחות החדשות שהתיישבו בעיר.</p>
+
+<div class="bio">
+<div class="who">ליאת כהן רביב</div>
+<p>היא פעילה אזרחית וחברתית בולטת, יזמית, מומחית למנהיגות אדפטיבית ותושבת המושבה מטולה שעל גבול הצפון. היא מוכרת כיום במיוחד כמייסדת ויו"ר תנועת "מצפינים", ארגון אזרחי א-מפלגתי שהוקם בעקבות אירועי ה-7 באוקטובר במטרה לייצג, לקדם ולשקם את אינטרס תושבי גבול הצפון והגליל. כהן רביב נבחרה לאחת מ-50 הנשים המשפיעות בישראל לשנת 2025 של עיתון גלובס ואף זכתה באות אבירת מרכז פרס לשלום וחדשנות.</p>
+</div>
+</div>
+
+<div class="choice">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ב'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="0,0 0,20 20,20" fill="#b8ded4"></polygon><rect x="20" y="0" width="20" height="20" fill="#224949"></rect><polygon points="20,0 40,0 20,20" fill="#d3b864"></polygon><rect x="0" y="20" width="20" height="20" fill="#224949"></rect><polygon points="20,20 20,40 0,40" fill="#d3b864"></polygon><rect x="20" y="20" width="20" height="20" fill="#b8ded4"></rect><polygon points="20,20 20,40 40,40" fill="#224949"></polygon><rect x="46" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="46,0 66,0 66,20" fill="#b8ded4"></polygon><rect x="66" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="66,0 86,0 86,20" fill="#3c7575"></polygon><rect x="46" y="20" width="20" height="20" fill="#b8ded4"></rect><polygon points="46,20 66,20 46,40" fill="#224949"></polygon><rect x="66" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="92" y="0" width="20" height="20" fill="#3c7575"></rect><rect x="112" y="0" width="20" height="20" fill="#224949"></rect><rect x="92" y="20" width="20" height="20" fill="#224949"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect></svg></div>
+<h3>שעת מבחן, קהילה, מדינה ומנהיגות במג'דל שמס</h3>
+<p>הסיור במג'דל יעסוק במתח שבין קהילה למדינה בעקבות המלחמה. כיצד משתנים יחסי האמון, השייכות והאחריות ההדדית, ומה נדרש ממנהיגות מקומית וחינוכית במציאות הזאת? פגיעת הרקטה במג'דל שמס אירעה בשבת27&nbsp; ביולי&nbsp; 2024 כחלק מהלחימה בזירת לבנון במלחמת חרבות ברזל. הרקטה פגעה במגרש הכדורגל וגרמה למותם של 12 ילדים ובני נוער, ולפציעתם של 34 נוספים. הפגיעה הקשה ביותר באוכלוסייה האזרחית בישראל במלחמה. בסיור נפגוש את מנהלת בית הספר בלקיס אבו סאלח ואת ראש המועצה דולאן אבו סאלח ונשמע סיפור על מנהיגות בזמן משבר.</p>
+
+<div class="bio">
+<div class="who">בלקיס אבו סאלח</div>
+<p>מנהלת בית ספר יסודי במג'דל שמס, מובילת יוזמות חינוכיות במסגרת הקרן לעידוד יוזמות חינוכיות, ופעילה במתי"א הגליל. גרה בסמיכות למגרש הכדורגל בו נהרגו 12 ילדים ונערים כתוצאה מפגיעת רקטה שנורתה ע"י חיזבאללה ביולי 24. נשוחח עם בלקיס על התמודדות בית הספר והקהילה עם האסון, ועם החזרה לשגרה. על מערכת היחסים עם רשויות המדינה, ועם הדרוזים בסוריה.</p>
+</div>
+<div class="bio">
+<div class="who">דולאן אבו סאלח</div>
+<p>ראש המועצה המקומית מג'דל שמס, יליד 1978, נולד וגדל במג'דל שמס ומתגורר בה עם משפחתו. בשנים 1999–2006 עבד כעובד זכאות בלשכת הרווחה של המועצה המקומית, ובהמשך עסק בגישור ובהתנדבות בתחום שירותי הסיעוד. בשנת 2008 מונה לראש המועצה הממונה וכיהן בתפקיד עד 2017. בשנת 2018 נבחר לראשונה בבחירות המקומיות, ובשנת 2024 נבחר לכהונה נוספת. הוא בעל תואר ראשון בשירותי אנוש ולימודים רב־תחומיים מהמכללה האקדמית תל חי, וכן הכשרות בתחומי השלטון המקומי, ניהול כלכלי מוניציפלי, גישור וניהול מצבי חירום.</p>
+</div>
+</div>
+
+<div class="choice">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ג'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="20" y="0" width="20" height="20" fill="#b8ded4"></rect><polygon points="20,0 40,0 20,20" fill="#224949"></polygon><rect x="0" y="20" width="20" height="20" fill="#3c7575"></rect><rect x="20" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><rect x="66" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="46" y="20" width="20" height="20" fill="#3c7575"></rect><rect x="66" y="20" width="20" height="20" fill="#b8ded4"></rect><polygon points="66,20 86,20 86,40" fill="#224949"></polygon><rect x="92" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="112" y="0" width="20" height="20" fill="#224949"></rect><rect x="92" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect><polygon points="112,20 132,20 132,40" fill="#b8ded4"></polygon></svg></div>
+<h3>לא אותו סיפור, לא אותו שבר – מפגש עם קהילות בקיבוצי אצבע הגליל</h3>
+<p>מלחמת חרבות ברזל השפיעה באופן דרמטי על קיבוצי אצבע הגליל, שחוו פינוי ממושך, נזקים כבדים לתשתיות ולחקלאות, ומציאות ביטחונית מורכבת מול גבול לבנון. בעקבות הלחימה מול חיזבאללה רוב מוחלט של קיבוצי ויישובי אצבע הגליל והסביבה (כמו מנרה, יפתח, כפר גלעדי ועוד) פונו מתושביהם בהחלטת ממשלה. קיבוצי השמינייה - שדה נחמיה, עמיר, שמיר, כפר בלום, להבות הבשן, כפר סאלד, גונן ונאות מרדכי הרחוקים מעל 5 ק"מ מהגבול לא פונו, ותושביהם נשארו לחיות תחת איום ירי רצוף. מהלך זה יצר שונות גבוהה מאוד באופני ההתמודדות של הקיבוצים עם המציאות המלחמתית המתמשכת. הסיור יחשוף את המשתתפים לשונות הגדולה בין הקהילות, מעגלי ההשפעה של המלחמה ומאמצי השיקום.</p>
+</div>
+</div>
+
+<div style="margin-top:28px">
+<div class="row"><div class="time">18:00</div><div>הגעה למלון "הווילג' על הירדן", קבלת חדרים ומנוחה</div></div>
+<div class="row"><div class="time">19:00</div><div>ארוחת ערב</div></div>
+<div class="row"><div class="time">20:00</div><div>פעילות ערב משותפת</div></div>
+</div>
+</div>
+</section>
+
+<section style="padding:80px 0;background:#b8ded4">
+<div class="wrap">
+<div class="label" style="color:#224949">יום שלישי</div>
+<h2 style="margin-top:8px">יום שלישי | 10.11</h2>
+<div style="font-size:24px;font-family:'Masada',sans-serif;color:#224949;margin-top:4px">קריית שמונה: עיר שמספרת את עצמה</div>
+
+<div style="margin-top:24px">
+<div class="row"><div class="time">06:30</div><div>בוקר טוב | פעילות ספורטיבית למשכימי קום | יוגה, ריצה והליכה על תוואי הנחל</div></div>
+<div class="row"><div class="time">07:30</div><div>ארוחת בוקר והחזרת מפתחות חדרים</div></div>
+<div class="row"><div class="time">08:30</div><div>יציאה מהמלון לקריית שמונה</div></div>
+</div>
+
+<div style="margin-top:36px">
+<h3 style="color:#224949">09:00 · קריית שמונה – עיר שמספרת את עצמה</h3>
+<div style="font-size:20px;color:#224949;font-weight:700;margin:4px 0 12px">סיורים לבחירה</div>
+<div><span class="pill" style="background:#d3b864">בחירה: בחרו סיור אחד מבין השלושה</span></div>
+
+<div class="choice" style="background:#faf6ed">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה א'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="0,0 20,0 0,20" fill="#3c7575"></polygon><rect x="20" y="0" width="20" height="20" fill="#b8ded4"></rect><polygon points="20,0 40,0 20,20" fill="#224949"></polygon><rect x="0" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="20" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="46" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="66" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="86,0 86,20 66,20" fill="#3c7575"></polygon><rect x="46" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="66" y="20" width="20" height="20" fill="#224949"></rect><polygon points="66,20 86,20 66,40" fill="#d3b864"></polygon><rect x="92" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="92,0 92,20 112,20" fill="#3c7575"></polygon><rect x="112" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="92" y="20" width="20" height="20" fill="#224949"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect><polygon points="112,20 132,20 132,40" fill="#b8ded4"></polygon></svg></div>
+<h3>זה עסק לא פשוט: תעסוקה, יזמות ופיתוח כלכלי בגליל העליון</h3>
+<p>הסיור יפתח במתחם קניון 8 באמצע בלב העיר קריית שמונה. המשכו סיור ופאנל בנושא תעסוקה: זה עסק לא פשוט – תעסוקה, יזמות ופיתוח כלכלי בגליל העליון, בין אתגרי הפריפריה למציאות של אי ודאות.&nbsp; HUBayta&nbsp; הוא מתחם יזמות, חדשנות ועבודה משותפת (Co-working) הממוקם בעמק החולה בקרבת צומת כוח. המיזם הינו פרי שיתוף פעולה בין תנועת "הביתה - חוזרים לגליל", רשת מתחמי היזמות OpenValley&nbsp; ורשת "האבזלת" מרמת הגולן. מציע מודל All In One&nbsp; |לחברות סטארט-אפ, יזמים ועובדים מהאזור, המשלב קהילה, גופי השקעה, פיתוח עסקי, ליווי ונטוורקינג. משתתפי הפאנל ישתפו באתגרים התעסוקתיים העומדים בפני תושבי אצבע הגליל ויספרו על מיזמים שונים להם הם שותפים שייעודם להתמודד עם אתגרים אלו.&nbsp; &nbsp;</p>
+</div>
+
+<div class="choice" style="background:#faf6ed">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ב'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="20,0 20,20 0,20" fill="#b8ded4"></polygon><rect x="20" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="0" y="20" width="20" height="20" fill="#224949"></rect><rect x="20" y="20" width="20" height="20" fill="#d3b864"></rect><polygon points="20,20 20,40 40,40" fill="#3c7575"></polygon><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><rect x="66" y="0" width="20" height="20" fill="#224949"></rect><polygon points="86,0 86,20 66,20" fill="#d3b864"></polygon><rect x="46" y="20" width="20" height="20" fill="#3c7575"></rect><polygon points="46,20 66,20 46,40" fill="#b8ded4"></polygon><rect x="66" y="20" width="20" height="20" fill="#224949"></rect><rect x="92" y="0" width="20" height="20" fill="#224949"></rect><polygon points="92,0 92,20 112,20" fill="#d3b864"></polygon><rect x="112" y="0" width="20" height="20" fill="#224949"></rect><rect x="92" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect></svg></div>
+<h3>קריית שמונה, מבט על קהילה</h3>
+<p>קריית שמונה עוברת תקופה מורכבת של שיקום והתחדשות קהילתית בעקבות מלחמת חרבות ברזל ומודל הפינוי הארוך. נכון לאוקטובר 2026 מונה האוכלוסייה בעיר כ 15,000 תושבים לערך. כ-30%-35% מהתושבים הוותיקים שעזבו בזמן המלחמה לא חזרו לעיר. לצד זאת הצטרפו לעיר כוחות חדשים: גל של עשרות עד מאות משפחות צעירות ומפונים אידאולוגיים שמגיעים לעיר מתוך תחושת שליחות ורצון לקחת חלק בשיקומה. בסיור נבחן שאלות של חוסן ושיקום: הצורך בבנייה מחדש של תשתיות, חיזוק הניהול העירוני, וטיפול בחובות ארנונה ובפילוג האזורי באצבע הגליל. לצד שאלות הנוגעות בזהות עתידית: התמודדות עם השאלות האם וכיצד תצליח הקהילה לשמור על צביונה המקומי ולמשוך אליה אוכלוסיות חזקות חדשות.</p>
+</div>
+
+<div class="choice" style="background:#faf6ed">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ג'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#b8ded4"></rect><polygon points="0,0 0,20 20,20" fill="#224949"></polygon><rect x="20" y="0" width="20" height="20" fill="#224949"></rect><polygon points="40,0 40,20 20,20" fill="#d3b864"></polygon><rect x="0" y="20" width="20" height="20" fill="#224949"></rect><polygon points="0,20 0,40 20,40" fill="#d3b864"></polygon><rect x="20" y="20" width="20" height="20" fill="#224949"></rect><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><rect x="66" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="66,0 66,20 86,20" fill="#b8ded4"></polygon><rect x="46" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="66" y="20" width="20" height="20" fill="#3c7575"></rect><rect x="92" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="112" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="112,0 132,0 112,20" fill="#b8ded4"></polygon><rect x="92" y="20" width="20" height="20" fill="#224949"></rect><rect x="112" y="20" width="20" height="20" fill="#d3b864"></rect><polygon points="112,20 112,40 132,40" fill="#3c7575"></polygon></svg></div>
+<h3>קריית שמונה, מבט על חינוך</h3>
+<p>תלמידי הצפון מתמודדים עם השלכות הפינוי והמלחמה, שפגעו ברציפות הלימודית, בנוכחות בבית הספר ובתחושת השגרה והיציבות. המעברים בין מסגרות והיקף לימודים מצומצם הובילו להצטברות פערים לימודיים, לצד פגיעה רגשית וחברתית ועלייה בחרדה, בהתנהגויות סיכון ובחשש מנשירה. החזרה לעיר אינה אחידה, ומספר התלמידים נותר נמוך; חלק מבתי הספר והגנים לא נפתחו, ויש צורך להתאים מסגרות ושירותי חינוך מיוחד. מערכת החינוך מתמודדת גם עם מחסור באנשי צוות, במיוחד בגיל הרך, בסייעות ובחינוך הבלתי־פורמלי, וכן עם צורך במענים רגשיים ומשאבים נוספים. האתגר המרכזי הוא להשיב לתלמידים תחושת ביטחון ורציפות, לצמצם פערים ולספק תמיכה מותאמת ומתמשכת להם, למשפחותיהם ולצוותי החינוך. בסיור זה נלמד איך כל זה נראה הלכה למעשה דרך העיניים של מנהלות בית ספר, תלמידי כיתות יב' ואנשי מטה במערכת החינוך של קריית שמונה.</p>
+</div>
+</div>
+
+<div style="margin-top:28px">
+<div class="row"><div class="time">13:00</div><div>ארוחת צהריים | מאמא חלסה</div></div>
+<div class="row"><div class="time">14:00</div><div>עיבוד וסיכום בקבוצות מעורבות | "ועוד לא אמרתי הכל ועוד יש מה לומר"</div></div>
+<div class="row"><div class="time">15:30</div><div>יד ביד צעדנו את כל הדרך | מדרימים</div></div>
+</div>
+</div>
+</section>
+
+<section style="padding:64px 0 140px;background:#faf6ed">
+<div class="wrap">
+<div style="font-family:'Masada',sans-serif;font-size:30px;color:#224949;line-height:1.5">נתראה בצפון</div>
+</div>
+</section>
+
+<a href="https://mandel.involve.me/siur2026" target="_blank" rel="noopener" class="cta">להרשמה לסיור</a>
+
+</div>
+<script>
+(function () {
+  function closeAll() {
+    document.querySelectorAll('[data-popup].open').forEach(function (p) { p.classList.remove('open'); });
+  }
+  function openPopup(k) {
+    closeAll();
+    var p = document.querySelector('[data-popup="' + k + '"]');
+    if (p) p.classList.add('open');
+  }
+  document.querySelectorAll('[data-open]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-open');
+      var p = document.querySelector('[data-popup="' + k + '"]');
+      if (p && p.classList.contains('open')) closeAll(); else openPopup(k);
+    });
+  });
+  document.querySelectorAll('[data-popup]').forEach(function (p) {
+    p.addEventListener('click', function (e) { if (e.target === p) closeAll(); });
+  });
+  document.querySelectorAll('.x').forEach(function (x) { x.addEventListener('click', closeAll); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+})();
+</script>
+</body>
+</html>
