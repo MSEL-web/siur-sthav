@@ -42,7 +42,13 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 .popup{display:none}
 .popup.open{display:flex}
 .map-stage{position:absolute;left:0;top:0;width:100%;height:100%}
-@media (max-width:640px){.map-stage{width:166.7%;height:auto;aspect-ratio:760/600;left:-66.7%}}
+@media (max-width:640px){
+.map-box{aspect-ratio:1/1 !important}
+.map-stage{width:260%;height:auto;aspect-ratio:760/600;left:-126%;top:-12%}
+.spot{width:30px;height:30px;margin:-15px 0 0 -15px;font-size:14px;border-width:2px}
+.spot .lbl{left:34px;font-size:13px;padding:2px 6px}
+.spot .lbl.l{left:auto;right:34px}
+}
 .card{position:relative}
 .x{position:absolute;top:10px;left:10px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;font-family:'Masada',sans-serif;font-size:34px;line-height:1;color:#224949;padding:0}
 .x:hover{color:#3c7575}
@@ -83,7 +89,7 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 <h2 style="margin-top:8px">איפה נהיה?</h2>
 <p style="margin:0 0 24px;font-size:17px;line-height:1.6">לחצו על שם מקום כדי לקרוא עליו.</p>
 
-<div style="position:relative;width:100%;aspect-ratio:760/600;background:#eef5f2;border:1px solid #3c7575;box-sizing:border-box;overflow:hidden">
+<div class="map-box" style="position:relative;width:100%;aspect-ratio:760/600;background:#eef5f2;border:1px solid #3c7575;box-sizing:border-box;overflow:hidden">
 <div class="map-stage">
 <svg viewBox="0 0 760 600" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%">
 <polygon points="42,260 211,250 338,280 380,240 422,200 431,150 439,110 448,70 515,80 574,90 608,80 659,50 684,130 701,250 684,390 633,500 515,570 448,530 431,650 422,850 422,950 -42,950 -68,570 17,500" fill="#faf6ed" stroke="#3c7575" stroke-width="1"></polygon>
