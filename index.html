@@ -41,6 +41,8 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 @media (max-width:640px){h2{font-size:34px}h3{font-size:22px}.row{flex-direction:column;gap:4px}.opts{grid-template-columns:minmax(0,1fr)}.spot .lbl{font-size:13px}}
 .popup{display:none}
 .popup.open{display:flex}
+.map-stage{position:absolute;left:0;top:0;width:100%;height:100%}
+@media (max-width:640px){.map-stage{width:166.7%;height:auto;aspect-ratio:760/600;left:-66.7%}}
 .card{position:relative}
 .x{position:absolute;top:10px;left:10px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;font-family:'Masada',sans-serif;font-size:34px;line-height:1;color:#224949;padding:0}
 .x:hover{color:#3c7575}
@@ -82,6 +84,7 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 <p style="margin:0 0 24px;font-size:17px;line-height:1.6">לחצו על שם מקום כדי לקרוא עליו.</p>
 
 <div style="position:relative;width:100%;aspect-ratio:760/600;background:#eef5f2;border:1px solid #3c7575;box-sizing:border-box;overflow:hidden">
+<div class="map-stage">
 <svg viewBox="0 0 760 600" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%">
 <polygon points="42,260 211,250 338,280 380,240 422,200 431,150 439,110 448,70 515,80 574,90 608,80 659,50 684,130 701,250 684,390 633,500 515,570 448,530 431,650 422,850 422,950 -42,950 -68,570 17,500" fill="#faf6ed" stroke="#3c7575" stroke-width="1"></polygon>
 <polyline points="42,260 211,250 338,280 380,240 422,200 431,150 439,110 448,70" fill="none" stroke="#224949" stroke-width="0.6" stroke-dasharray="3 4"></polyline>
@@ -96,6 +99,7 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 <button class="spot" style="left:54.9%;top:25.8%" data-open="manara">4<span class="lbl l">מנרה</span></button>
 <button class="spot" style="left:67.8%;top:30.5%" data-open="shamir">5<span class="lbl">שמיר</span></button>
 <button class="spot" style="left:64.6%;top:31%" data-open="council">6<span class="lbl l">מועצה אזורית הגליל העליון</span></button>
+</div>
 </div>
 </div>
 </section>
@@ -222,6 +226,10 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ג'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="20" y="0" width="20" height="20" fill="#b8ded4"></rect><polygon points="20,0 40,0 20,20" fill="#224949"></polygon><rect x="0" y="20" width="20" height="20" fill="#3c7575"></rect><rect x="20" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><rect x="66" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="46" y="20" width="20" height="20" fill="#3c7575"></rect><rect x="66" y="20" width="20" height="20" fill="#b8ded4"></rect><polygon points="66,20 86,20 86,40" fill="#224949"></polygon><rect x="92" y="0" width="20" height="20" fill="#b8ded4"></rect><rect x="112" y="0" width="20" height="20" fill="#224949"></rect><rect x="92" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect><polygon points="112,20 132,20 132,40" fill="#b8ded4"></polygon></svg></div>
 <h3>לא אותו סיפור, לא אותו שבר – מפגש עם קהילות בקיבוצי אצבע הגליל</h3>
 <p>מלחמת חרבות ברזל השפיעה באופן דרמטי על קיבוצי אצבע הגליל, שחוו פינוי ממושך, נזקים כבדים לתשתיות ולחקלאות, ומציאות ביטחונית מורכבת מול גבול לבנון. בעקבות הלחימה מול חיזבאללה רוב מוחלט של קיבוצי ויישובי אצבע הגליל והסביבה (כמו מנרה, יפתח, כפר גלעדי ועוד) פונו מתושביהם בהחלטת ממשלה. קיבוצי השמינייה - שדה נחמיה, עמיר, שמיר, כפר בלום, להבות הבשן, כפר סאלד, גונן ונאות מרדכי הרחוקים מעל 5 ק"מ מהגבול לא פונו, ותושביהם נשארו לחיות תחת איום ירי רצוף. מהלך זה יצר שונות גבוהה מאוד באופני ההתמודדות של הקיבוצים עם המציאות המלחמתית המתמשכת. הסיור יחשוף את המשתתפים לשונות הגדולה בין הקהילות, מעגלי ההשפעה של המלחמה ומאמצי השיקום.</p>
+<div class="bio">
+<div class="who">עובד בן זאב</div>
+<p>מכהן כמנהל הקהילה בקיבוץ שמיר שבגליל העליון. בתפקידו הוא אמון על הובלת המערך הקהילתי והשירותי, ניהול ממשקים מול מוסדות וגורמי פנים וחוץ, וקידום תהליכים חברתיים ואסטרטגיים לחיזוק החוסן הקהילתי באתגרי המרחב הצפוני. לצד עשייתו הציבורית, בן זאב הוא שחיין מקצועי, איש משפחה מסור, ואוהד מושבע של הפועל תל אביב ומנצ'סטר יונייטד.</p>
+</div>
 </div>
 </div>
 
@@ -254,18 +262,46 @@ h3{margin:0 0 8px;font-size:26px;color:#224949;line-height:1.3}
 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה א'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="0,0 20,0 0,20" fill="#3c7575"></polygon><rect x="20" y="0" width="20" height="20" fill="#b8ded4"></rect><polygon points="20,0 40,0 20,20" fill="#224949"></polygon><rect x="0" y="20" width="20" height="20" fill="#d3b864"></rect><rect x="20" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="46" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="66" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="86,0 86,20 66,20" fill="#3c7575"></polygon><rect x="46" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="66" y="20" width="20" height="20" fill="#224949"></rect><polygon points="66,20 86,20 66,40" fill="#d3b864"></polygon><rect x="92" y="0" width="20" height="20" fill="#d3b864"></rect><polygon points="92,0 92,20 112,20" fill="#3c7575"></polygon><rect x="112" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="92" y="20" width="20" height="20" fill="#224949"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect><polygon points="112,20 132,20 132,40" fill="#b8ded4"></polygon></svg></div>
 <h3>זה עסק לא פשוט: תעסוקה, יזמות ופיתוח כלכלי בגליל העליון</h3>
 <p>הסיור יפתח במתחם קניון 8 באמצע בלב העיר קריית שמונה. המשכו סיור ופאנל בנושא תעסוקה: זה עסק לא פשוט – תעסוקה, יזמות ופיתוח כלכלי בגליל העליון, בין אתגרי הפריפריה למציאות של אי ודאות.&nbsp; HUBayta&nbsp; הוא מתחם יזמות, חדשנות ועבודה משותפת (Co-working) הממוקם בעמק החולה בקרבת צומת כוח. המיזם הינו פרי שיתוף פעולה בין תנועת "הביתה - חוזרים לגליל", רשת מתחמי היזמות OpenValley&nbsp; ורשת "האבזלת" מרמת הגולן. מציע מודל All In One&nbsp; |לחברות סטארט-אפ, יזמים ועובדים מהאזור, המשלב קהילה, גופי השקעה, פיתוח עסקי, ליווי ונטוורקינג. משתתפי הפאנל ישתפו באתגרים התעסוקתיים העומדים בפני תושבי אצבע הגליל ויספרו על מיזמים שונים להם הם שותפים שייעודם להתמודד עם אתגרים אלו.&nbsp; &nbsp;</p>
+<div class="bio">
+<div class="who">יואל אורבוך</div>
+<p>מסעדן ויזם, בעלים-שותף של "פיצה טראק" בדפנה ושל "קוקיה בשביל" בכפר גלעדי.</p>
+</div>
+<div class="bio">
+<div class="who">יערה אשחר-שיר</div>
+<p>עוסקת בקידום מוביליות חברתית באמצעות השכלה ותעסוקה ובבניית שותפויות בין רשויות, ארגונים וקהילות. עברה עם משפחתה מירושלים לקריית שמונה בעקבות המלחמה והפינוי, וכיום פועלת לקידום תעסוקה וקליטת משפחות בגליל המזרחי.</p>
+</div>
+<div class="bio">
+<div class="who">רותי קלנר עקרון</div>
+<p>מנהלת הבית לעסקים בגליל המזרחי, המעניק מעטפת מקצועית לעסקים קטנים ובינוניים בקריית שמונה ובאזור. במסגרת זו ניתנים ליווי עסקי, סיוע במיצוי זכויות ומענקים, הכוונה למימון וחיבורים עסקיים לחיזוק הכלכלה המקומית.</p>
+</div>
+<div class="bio">
+<div class="who">אבנר רגב</div>
+<p>מנהל ויזם Openvally, עוסק בפיתוח כלכלי ובהובלת פרויקטים אסטרטגיים, ופעיל בתנועת "הביתה" - חוזרים לגליל” במסגרת מיזם  HUBayta.  מומחה בהקמת מנגנונים ארגוניים ובהובלת מהלכים בשלטון המקומי ובמגזרים נוספים.</p>
+</div>
 </div>
 
 <div class="choice" style="background:#faf6ed">
 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ב'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="20,0 20,20 0,20" fill="#b8ded4"></polygon><rect x="20" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="0" y="20" width="20" height="20" fill="#224949"></rect><rect x="20" y="20" width="20" height="20" fill="#d3b864"></rect><polygon points="20,20 20,40 40,40" fill="#3c7575"></polygon><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><rect x="66" y="0" width="20" height="20" fill="#224949"></rect><polygon points="86,0 86,20 66,20" fill="#d3b864"></polygon><rect x="46" y="20" width="20" height="20" fill="#3c7575"></rect><polygon points="46,20 66,20 46,40" fill="#b8ded4"></polygon><rect x="66" y="20" width="20" height="20" fill="#224949"></rect><rect x="92" y="0" width="20" height="20" fill="#224949"></rect><polygon points="92,0 92,20 112,20" fill="#d3b864"></polygon><rect x="112" y="0" width="20" height="20" fill="#224949"></rect><rect x="92" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="112" y="20" width="20" height="20" fill="#3c7575"></rect></svg></div>
 <h3>קריית שמונה, מבט על קהילה</h3>
 <p>קריית שמונה עוברת תקופה מורכבת של שיקום והתחדשות קהילתית בעקבות מלחמת חרבות ברזל ומודל הפינוי הארוך. נכון לאוקטובר 2026 מונה האוכלוסייה בעיר כ 15,000 תושבים לערך. כ-30%-35% מהתושבים הוותיקים שעזבו בזמן המלחמה לא חזרו לעיר. לצד זאת הצטרפו לעיר כוחות חדשים: גל של עשרות עד מאות משפחות צעירות ומפונים אידאולוגיים שמגיעים לעיר מתוך תחושת שליחות ורצון לקחת חלק בשיקומה. בסיור נבחן שאלות של חוסן ושיקום: הצורך בבנייה מחדש של תשתיות, חיזוק הניהול העירוני, וטיפול בחובות ארנונה ובפילוג האזורי באצבע הגליל. לצד שאלות הנוגעות בזהות עתידית: התמודדות עם השאלות האם וכיצד תצליח הקהילה לשמור על צביונה המקומי ולמשוך אליה אוכלוסיות חזקות חדשות.</p>
+<div class="bio">
+<div class="who">אביחי סגרון</div>
+<p>יליד קריית שמונה, הוא מנהל קהילתי, יזם ומנחה קבוצות. לאורך השנים עסק בניהול ובהובלת תהליכים קהילתיים, ובתקופת הפינוי ניהל את מחוזות חיפה והשרון וליווה אלפי תושבים שפונו מבתיהם. הוא מנהל את מערך בינוי הקהילה ואת תחום הילדים והנוער ברשת המתנ״סים בקריית שמונה, מנכ״ל עמותת גדוד 8101 אלכסנדרוני, ומייסד ״מקופסה למציאות״, העוסקת בסדנאות גיבוש ולמידה חווייתית. לצד עשייתו האזרחית, שירת מאות ימי מילואים כלוחם בחטיבת אלכסנדרוני. בהרצאותיו הוא מביא ניסיון מהשטח בהובלת אנשים, בבניית קהילה ובהתמודדות עם מציאות משתנה.</p>
+</div>
+<div class="bio">
+<div class="who">אופיר יחזקאלי</div>
+<p>דמות ציבורית ופוליטית המוכרת בעיקר מפעילותו בקריית שמונה ובגליל. הוא כיהן כסגן וממלא מקום ראש עיריית קריית שמונה, תפקיד בו הרבה לעסוק בסוגיות הביטחון וההתשה של תושבי הצפון מול חיזבאללה. בעברו המקצועי מילא תפקידים משמעותיים בתחום הפיתוח האזורי, ביניהם מנהל אזור גליל מזרחי במיזם "יוזמה לאומית" ורכז צמיחה דמוגרפית ברשות לפיתוח הגליל. בנוסף, שימש כמנהל מרכז צעירים בעיר, תפקיד שממנו המשיך לאתגרים ציבוריים נוספים. יחזקאלי התמודד לראשות העיר קריית שמונה, תוך שהוא מדגיש את מחויבותו לחיזוק העיר והאזור. פעילותו מתאפיינת בגישה אקטיבית וביקורתית כלפי הטיפול הממשלתי ביישובי קו העימות.</p>
+</div>
 </div>
 
 <div class="choice" style="background:#faf6ed">
 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div class="label">בחירה ג'</div><svg viewBox="0 0 132 40" aria-hidden="true" focusable="false" style="width:96px;height:auto;display:block;flex:none"><rect x="0" y="0" width="20" height="20" fill="#b8ded4"></rect><polygon points="0,0 0,20 20,20" fill="#224949"></polygon><rect x="20" y="0" width="20" height="20" fill="#224949"></rect><polygon points="40,0 40,20 20,20" fill="#d3b864"></polygon><rect x="0" y="20" width="20" height="20" fill="#224949"></rect><polygon points="0,20 0,40 20,40" fill="#d3b864"></polygon><rect x="20" y="20" width="20" height="20" fill="#224949"></rect><rect x="46" y="0" width="20" height="20" fill="#224949"></rect><rect x="66" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="66,0 66,20 86,20" fill="#b8ded4"></polygon><rect x="46" y="20" width="20" height="20" fill="#b8ded4"></rect><rect x="66" y="20" width="20" height="20" fill="#3c7575"></rect><rect x="92" y="0" width="20" height="20" fill="#d3b864"></rect><rect x="112" y="0" width="20" height="20" fill="#3c7575"></rect><polygon points="112,0 132,0 112,20" fill="#b8ded4"></polygon><rect x="92" y="20" width="20" height="20" fill="#224949"></rect><rect x="112" y="20" width="20" height="20" fill="#d3b864"></rect><polygon points="112,20 112,40 132,40" fill="#3c7575"></polygon></svg></div>
 <h3>קריית שמונה, מבט על חינוך</h3>
 <p>תלמידי הצפון מתמודדים עם השלכות הפינוי והמלחמה, שפגעו ברציפות הלימודית, בנוכחות בבית הספר ובתחושת השגרה והיציבות. המעברים בין מסגרות והיקף לימודים מצומצם הובילו להצטברות פערים לימודיים, לצד פגיעה רגשית וחברתית ועלייה בחרדה, בהתנהגויות סיכון ובחשש מנשירה. החזרה לעיר אינה אחידה, ומספר התלמידים נותר נמוך; חלק מבתי הספר והגנים לא נפתחו, ויש צורך להתאים מסגרות ושירותי חינוך מיוחד. מערכת החינוך מתמודדת גם עם מחסור באנשי צוות, במיוחד בגיל הרך, בסייעות ובחינוך הבלתי־פורמלי, וכן עם צורך במענים רגשיים ומשאבים נוספים. האתגר המרכזי הוא להשיב לתלמידים תחושת ביטחון ורציפות, לצמצם פערים ולספק תמיכה מותאמת ומתמשכת להם, למשפחותיהם ולצוותי החינוך. בסיור זה נלמד איך כל זה נראה הלכה למעשה דרך העיניים של מנהלות בית ספר, תלמידי כיתות יב' ואנשי מטה במערכת החינוך של קריית שמונה.</p>
+<div class="bio">
+<div class="who">רחל הוד</div>
+<p>מנהלת בית הספר הממלכתי-דתי רמב"ם בקריית שמונה למעלה מ-12 שנים. ילידת העיר ודור שני בקריה. כאשר נכנסה לתפקיד לפני כ-12 שנים, בית הספר היה על סף סגירה, והיא הצליחה לשקם אותו ולהפוך אותו למוסד חינוכי ייחודי ומוביל. לבית הספר ייחודיות פרי עמלה של רחל והיא מרכז מבקרים גלילי למימוש ייחודיות תלמידים, עם דגש על מנהיגות אישית וקהילתית, חדשנות פדגוגית, ולמידה חוץ-כיתתית. בתקופת המלחמה: הובילה את הקהילה והתלמידים המפונים מקריית שמונה לאורך תקופת הפינוי והחזרה ללמידה.</p>
+</div>
 </div>
 </div>
 
